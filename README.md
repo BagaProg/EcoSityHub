@@ -1,3 +1,2 @@
-# DreamTeam
-Project DreamTeam
-Все вижу
+# EcoSityHub
+EcoSityHub is a project of DreamTeam
