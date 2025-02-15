@@ -37,30 +37,6 @@ clickMeButton.addEventListener('click' , () => {
     const signup = document.querySelector('.header__accountButtons_signup');
     const login1 = document.querySelector('#login1')
     const login2 = document.querySelector('#login2')
-    // setTimeout(() => {
-    // login.classList.add('active');
-    //     setTimeout(() =>{
-    //         login.classList.remove('active')
-    //     },2500);
-    // },700);
-    // setTimeout(() => {
-    //     signup.classList.add('active');
-    //     setTimeout(() =>{
-    //         signup.classList.remove('active')
-    //     },2500);
-    // },700);
-    // setTimeout(() => {
-    //     login1.classList.add('active');
-    //     setTimeout(() =>{
-    //         login1.classList.remove('active')
-    //     },2500);
-    // },700);
-    // setTimeout(() => {
-    //     login2.classList.add('active');
-    //     setTimeout(() =>{
-    //         login2.classList.remove('active')
-    //     },2500);
-    // },700);
     setTimeout(() => {
         login2.classList.add('active');
         login1.classList.add('active');
