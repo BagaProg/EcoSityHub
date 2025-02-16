@@ -1,0 +1,79 @@
+/* Box-sizing: border-box для всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы и внешние отступы по умолчанию */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Сбрасываем список маркеров */
+ul, ol {
+  list-style: none;
+}
+
+/* Ссылки: убираем подчеркивание и задаем цвет */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Изображения: корректируем размеры */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Убираем стандартные стили для элементов формы */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Добавляем плавный скроллинг */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Базовые стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* Стили для кнопок */
+button {
+  cursor: pointer;
+}
+
+/* Разделяемый контент для текстовых элементов */
+blockquote, q {
+  quotes: none;
+}
+
+/* Обнуляем overflow у body */
+body {
+  overflow-x: hidden;
+}
+
+html{
+  scroll-behavior: smooth;
+}
