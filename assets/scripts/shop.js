@@ -63,7 +63,7 @@ window.addEventListener('click' , event => {
 window.addEventListener('click' , event => {
   if (event.target.closest('.header__user')){
     document.querySelector('.aside').classList.add('active');
-  }if (!event.target.closest('.header__user')){
+  }if (!event.target.closest('.header__user') && !event.target.closest('.aside')){
     document.querySelector('.aside').classList.remove('active');
   }
 });
