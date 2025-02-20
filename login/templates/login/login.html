@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="features">
+            <h1>Singup<h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.username }}<br>
+                {{ form.password }}<br>
+                {{ form.email }}<br>
+                <span>{{ error }}</span>
+                <button class="btn btn-success" type="submit">Singup</button>
+            </form>
+        </div>
+    </body>
+</html>
