@@ -69,6 +69,14 @@ body{
   border: 1px solid rgba(255, 255, 255, 0.18);
   /* overflow: hidden; */
 }
+.ProductTitle{
+  padding: 0 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
 #loup{
   width: 25px;
   height: 25px;
@@ -81,7 +89,6 @@ body{
 .header__user{
   cursor: pointer;
 }
-
 .main{
   width: 100vw;
   margin-top: 80px;
@@ -90,13 +97,15 @@ body{
   width: 100%;
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   justify-content: center; 
   align-items: stretch;  
   grid-auto-columns: minmax(250px, 1fr);
   grid-auto-rows: minmax(300px, 1fr);
 }
 .main__wrapper{
+  min-width: 250px;
+  max-width: 300px;
   padding: 10px;
   position: relative;
   background-color: #f0f0f0;
@@ -114,6 +123,7 @@ body{
   width: 100%;
   height: 45%;
   position: relative;
+  object-fit: fill;
 }
 #basket, #basket2, #basket3, #basket4, #basket5{
   position: absolute;

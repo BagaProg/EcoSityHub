@@ -58,3 +58,10 @@ document.addEventListener('click' , event => {
         menu.classList.remove('active')
     }  
 })
+window.addEventListener('click' , event => {
+    if (event.target.closest('.header__user')){
+      document.querySelector('.aside').classList.add('active');
+    }if (!event.target.closest('.header__user') && !event.target.closest('.aside')){
+      document.querySelector('.aside').classList.remove('active');
+    }
+});
