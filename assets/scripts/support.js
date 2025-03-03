@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded' , () => {
   }
   const formImage = document.getElementById("formImage");
   const formPreview = document.getElementById('formPreview');
+  const formPrev = document.getElementById('formPrev');
   formImage.addEventListener('change' , () => {
     uploadFile(formImage.files[0]);
   });
@@ -97,7 +98,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
     var reader = new FileReader();
     reader.onload = function(e) {
-      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo">`;
+      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%;">`;
+      formPrev.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%;">`;
     };
     reader.onerror = e => {
       alert('Error');

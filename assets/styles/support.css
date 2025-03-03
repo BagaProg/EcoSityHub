@@ -81,14 +81,20 @@ body{
   width: 100%;
   margin: 0 15px;
   position: relative;
+  display: flex;
+  justify-content: space-around;
 }
-.main__form > div{
+.main__form_item{
+  width: 50%;
+  height: 100%;
+}
+.main__form > .main__form_item > div{
   margin: 0 0 20px 0;
 }
-.main__form > div > input , textarea , button{
+.main__form > .main__form_item > div > input , textarea , button{
   box-shadow: 4px 5px 8px 3px #0000000e;
 }
-.main__form > div > input._error{
+.main__form > .main__form_item > div > input._error{
   box-shadow: 2px 3px 8px 3px #ff000058;
 }
 .userName_label{
@@ -97,7 +103,7 @@ body{
   margin: 0 0 5px 0;
 }
 .userName_input{
-  width: 80%;
+  width: 98%;
   height: 45px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -112,7 +118,7 @@ body{
   margin: 0 0 5px 0;
 }
 .userEmail_input{
-  width: 80%;
+  width: 98%;
   height: 45px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -127,7 +133,7 @@ body{
   margin: 0 0 5px 0;
 }
 .userText_input{
-  width: 80%;
+  width: 98%;
   min-height: 85px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -148,7 +154,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  width: 8.5%;
+  width: 17%;
   height: 100%;
   font-size: 0;
   opacity: 0;
@@ -168,13 +174,38 @@ body{
   padding: 0 35px;
 }
 .file__preview{
-  max-width: 100%;
-  max-height: 100px;
+  width: 45%;
+  height: 442px;
   margin: 20px 0 0 0;
+  background-color: #f7f7f7;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  box-shadow: 4px 5px 8px 3px #0000000e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#formPrev{
+  width: 98%;
+  height: 321px;
+  display: none;
+  background-color: #f7f7f7;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  box-shadow: 4px 5px 8px 3px #0000000e;
+  overflow: hidden;
 }
 .userSubmit_button{
   margin: 45px 0 0 0;
-  min-width: 250px;
+  /* min-width: 250px; */
+  width: 43%;
   min-height: 45px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -348,7 +379,20 @@ body{
   -o-transition: all 0.5s linear 0s;
   background-color: rgba(0, 0, 0, 0.164);
 }
-@media(max-width: 390px){
+@media(max-width: 842px) {
+  #formPrev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .file__preview{
+    display: none;
+  }
+  .main__form_item{
+    width: 100%;
+  }
+}
+@media(max-width: 390px) {
   .header__logo{
     font-size: 26px;
   }
