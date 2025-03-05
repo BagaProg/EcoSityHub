@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Здесь был Baga -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSityMail</title>
+  <!-- icon -->
+  <link rel="icon" href="../assets/icons/icons8-натуральная-еда-48.png" type="image/png">
+  <!-- styles -->
+  <link rel="stylesheet" href="../assets/styles/support.css" type="text/css">
+  <link rel="stylesheet" href="../assets/styles/reset.css" type="text/css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <div class="header__items">
+        <div class="header__logo">
+          <p>EcoSityMail</p>
+        </div>
+        <div class="header__items_functions">
+          <div class="header__mail">
+            <img src="../assets/icons/icons8-почтаBlack-50.png" alt="" style="width: 40px; height: 40px;">
+          </div>
+          <div class="header__user">
+            <img src="../assets/icons/icons8-пользователь-мужчина-в-кружке-35.png" alt="" id="photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper hidden">
+    <div class="wrapper__title">
+      <p>Enter your bank details</p>
+    </div>
+    <form action="#" method="get" class="wrapper_form" name="bank">
+      <label for="name" id="title">Phone</label> <br>
+      <input type="tel" class="inp" name="username" placeholder="8 (777) 777 77-77" id="name"> <br>
+      <label for="email" id="title">Bank</label> <br>
+      <input type="number" class="inp" name="email" placeholder="7777 777 77" id="email"> <br>
+      <label for="password" id="title">Password </label> <br>
+      <input type="password" class="inp" name="password" placeholder="Your password" id="password"> <br>
+      <label for="sum">Select the amount</label> <br>
+      <input type="number" name="sum" class="inp" placeholder=""> 
+      <input type="submit" class="btn" value="Recharge" id="white" style="font-size: 30px;">
+    </form>
+  </div>
+  <aside class="aside">
+    <div class="aside__user_info">
+      <div class="aside__user_item">
+        <div class="aside__user_logo">
+          <img src="../assets/icons/icons8-пользователь-50.png" style="min-width: 50px; min-height: 50px;" alt="Error">
+        </div>
+        <div class="aside__user_name">
+          <p>User</p>
+        </div>
+      </div>
+      <div class="aside__user_money">
+        <div class="aside__user_bonus_add">
+          <svg width="15" height="15" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <rect x="13" y="0" width="4" height="30" />
+            <rect x="0" y="13" width="30" height="4" />
+          </svg> 
+        </div>
+        <div class="aside__user_bonus_items">
+          <div class="aside__user_bonus_money" id="white">
+            15.00
+          </div>
+          <div class="aside__user_bonus_ebucks">
+            <p id="white" style="border-top: 2px solid #f7f7f7; margin-bottom: 2px;">E</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside__navigation_buttons">
+      <a href="../pages/mainNew.html" class="aside__navigation_button"> 
+        <img src="../assets/icons/icons8-главная-страница-25.png" alt="">
+        <li>Main</li>
+      </a>
+      <a href="../pages/shop.html" class="aside__navigation_button">
+        <img src="../assets/icons/icons8-магазин-25.png" alt="">
+        <li>Shop</li>
+      </a>
+      <a href="../pages/support.html" class="aside__navigation_button">
+        <img src="../assets/icons/icons8-почтаBlack-50.png" style="width: 25px; height: 25px;" alt="">
+        <li>Mail</li>
+      </a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="container">
+      <div class="main__title">
+        <p class="main__title_text" id="dancing">Mail Delivery</p>
+      </div>
+      <form action="#" class="main__form" id="main__form">
+        <div class="main__form_item">
+          <div class="form__userName">
+            <label for="userName" class="userName_label">Name*:</label>
+            <input type="text" name="name" id="userName" class="userName_input _req" placeholder="Your name">
+          </div>
+          <div class="form__userEmail">
+            <label for="userEmail" class="userEmail_label">E-mail*:</label>
+            <input type="text" name="email" id="userEmail" class="userEmail_input _req _email" placeholder="Your email">
+          </div>
+          <div class="form__userText">
+            <label for="userText" class="userText_label">Message:</label>
+            <textarea type="text" id="userText" class="userText_input" placeholder="Your message"></textarea>
+          </div>
+          <div class="form__userPhoto">
+            <div class="form__userPhoto_title">
+              <p>Image:</p>
+            </div>
+            <div class="form__userPhoto_file">
+              <input type="file" accept=".jpg, .png, .gif" id="formImage" class="userPhoto_input">
+              <div class="userPhoto_button">
+                <p id="white">Select</p>
+              </div>
+            </div>
+          </div>
+          <div class="file__preview" id="formPrev"></div>
+          <button type="submit" class="userSubmit_button">Send</button>
+        </div>
+        <div class="file__preview" id="formPreview"></div>
+      </form>
+    </div>
+  </main>
+  <script src="../assets/scripts/support.js"></script>
+</body>
+</html>
