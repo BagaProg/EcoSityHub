@@ -11,7 +11,7 @@ $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = 'bakenb09@gmail.com'; 
-$mail->Password = 'your-app-password'; 
+$mail->Password = 'your-app-password';
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 $mail->setFrom('bakenb09@gmail.com', 'BakenB09'); 
