@@ -16,6 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Weather -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="body">
   <header class="header">
@@ -25,12 +30,26 @@
           <p>EcoSityMap</p>
         </div>
         <div class="header__items_functions">
+          <img src="../assets/icons/icons8-город-35.png" alt="" class="lupa">
+          <div class="header__search">
+            <img src="../assets/icons/icons8-город-35.png" alt="Error" id="loup">
+            <form action="#" name="search__form">
+              <input type="text" id="search" placeholder="Search" class="inputb" name="input">
+            </form>
+          </div>
           <div class="header__user">
             <img src="../assets/icons/icons8-пользователь-мужчина-в-кружке-35.png" alt="" id="photo" style="cursor: pointer;">
           </div>
         </div>
       </div>
     </div>
+    <div id="header__search">
+      <img src="../assets/icons/icons8-город-35.png" alt="Error" id="loup">
+      <form action="#" name="search__form" class="search__form">
+        <input type="text" placeholder="Search" id="inputb" name="input">
+      </form>
+    </div>
+  </header>
   </header>
   <div class="wrapper hidden">
     <div class="wrapper__title">
@@ -58,7 +77,13 @@
           <p>User</p>
         </div>
       </div>
-      <div class="aside__user_money">
+      <div class="aside__cancel">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="3" y1="3" x2="22" y2="22" stroke="black" stroke-width="3" stroke-linecap="round"/>
+          <line x1="22" y1="3" x2="3" y2="22" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        </svg>              
+      </div>
+      <!-- <div class="aside__user_money">
         <div class="aside__user_bonus_add">
           <svg width="15" height="15" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
             <rect x="13" y="0" width="4" height="30" />
@@ -73,9 +98,14 @@
             <p id="white">$</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="aside__navigation_buttons">
+      <a href="../pages/" class="aside__navigation_button" style="margin: 10px 0 0 0;">
+        <img src="../assets/icons/icons8-пользователь-без-половых-признаков-25.png" alt="">
+        <li>Profile</li>
+      </a>
+      <hr>
       <a href="../pages/mainNew.html" class="aside__navigation_button"> 
         <img src="../assets/icons/icons8-главная-страница-25.png" alt="">
         <li>Main</li>
@@ -88,8 +118,36 @@
         <img src="../assets/icons/icons8-почтаBlack-50.png" style="width: 25px; height: 25px;" alt="">
         <li>Mail</li>
       </a>
+      <a href="../pages/map.html" class="aside__navigation_button">
+        <img src="../assets/icons/icons8-карта-50.png" style="width: 25px; height: 25px;" alt="">
+        <li>Map</li>
+      </a>
     </div>
   </aside>
+  <main class="main">
+    <div class="container">
+      <div id="map"></div>
+      <div class="main_air">
+        <div class="chart-container">
+          <canvas id="airChart"></canvas>
+        </div>
+        <div class="info-container">
+          <p id="dancing">Air Pollution Levels in Your City</p>
+          <div class="info-grid">
+            <div class="info-item pm25">PM2.5</div>
+            <div class="info-item pm10">PM10</div>
+            <div class="info-item co">CO</div>
+            <div class="info-item no2">NO2</div>
+            <div class="info-item so2">SO2</div>
+            <div class="info-item o3">O3</div>
+          </div>
+          <div class="info-valuation">
+            <p style="font-size: 35px; margin: 0;" id="white" class="quality-text">Good</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="../assets/scripts/map.js"></script>
 </body>
 </html>
