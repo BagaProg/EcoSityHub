@@ -2,7 +2,7 @@
 window.addEventListener('click' , event => {
   if (event.target.closest('.header__user')){
     document.querySelector('.aside').classList.add('active');
-  }if (!event.target.closest('.header__user') && !event.target.closest('.aside')){
+  }if (event.target.closest('.aside__cancel') || !event.target.closest('.header__user') && !event.target.closest('.aside')){
     document.querySelector('.aside').classList.remove('active');
   }
 });
@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
     var reader = new FileReader();
     reader.onload = function(e) {
-      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%;">`;
-      formPrev.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%;">`;
+      formPreview.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%; z-index: 2;">`;
+      formPrev.innerHTML = `<img src="${e.target.result}" alt="Photo" style="width: 100%; height: 100%; z-index: 2;">`;
     };
     reader.onerror = e => {
       alert('Error');

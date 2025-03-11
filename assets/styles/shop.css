@@ -5,7 +5,7 @@ body{
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  background-color: #e7dbdb;
+  background-color: #efe4e4;
   font-variant-numeric: tabular-nums;
   width: 100vw;
   height: 100dvh;
@@ -314,7 +314,7 @@ body{
   width: 100%;
   align-items: center;
   gap: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .aside__user_item{
   display: flex;
@@ -353,7 +353,10 @@ body{
   margin: 0 auto;
   margin-top: 25px;
 }
-
+.aside__cancel{
+  margin-right: 30px;
+  cursor: pointer;
+}
 .aside__navigation_button{
   width: 100%;
   min-height: 30px;
