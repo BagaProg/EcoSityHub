@@ -1,0 +1,199 @@
+body {
+  padding-top: 56px;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  background-color: #efe4e4;
+  font-variant-numeric: tabular-nums;
+  width: 100vw;
+  height: 100dvh;
+}
+#dancing{
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#white{
+    color: #f7f7f7;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 20px;
+    margin: 0 auto;
+}
+.aside{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    right: -460px;
+    top: 0;
+    z-index: 3;
+    padding: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.052);
+    border: 1px solid rgba(255, 255, 255, 0.323);
+  }
+  .aside.active{
+    transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -ms-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    right: 0;
+  }
+  .aside__user_info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .aside__user_item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .aside__user_name{
+    font-size: 25px;
+  }
+  .aside__user_money{
+    min-width: 123px;
+    overflow: auto;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 9px 0 2px;
+    font-size: 18px;
+    background: linear-gradient(to right, #00adfd , #68cbf9);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    justify-content: space-around;
+  }
+  .aside__user_bonus_money{
+    min-height: 22px;
+  }
+  .aside__user_bonus_items{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .aside__navigation_buttons{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  .aside__cancel{
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .aside__navigation_button{
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-start;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+    padding-left: 12px;
+    margin: 10px 0 10px 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    text-align: center;
+  }
+  .aside__navigation_button:hover{
+    transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -ms-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    background-color: rgba(0, 0, 0, 0.164);
+  }
+  
+  .header{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: #f7f7f7;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.052);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .header__items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__logo{
+    min-width: 20%;
+    font-size: 35px;
+    color: #24c415;
+  }
+  .header__items_functions{
+    min-width: 95px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .p{
+    margin: 0;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  li{
+    list-style-type: none;
+  }
+  .header__user{
+    width: 130px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 52px;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+    background: linear-gradient(to right, #00a1ec , #2bbcff);
+    padding: 0 10px 0 0;
+  }
+  .header__user_name{
+    font-size: 25px;
+  }
+  @media(max-width: 390px) {
+    .header__logo{
+      font-size: 26px;
+    }
+  }
+  @media(max-width: 455px){
+    .header__user_name{
+      display: none;
+    }
+    .header__user{
+      background: transparent;
+      width: auto;
+      padding: 0;
+    }
+    .header__items_functions{
+      justify-content: end;
+    }
+  }

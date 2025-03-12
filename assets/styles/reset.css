@@ -73,7 +73,3 @@ blockquote, q {
 body {
   overflow-x: hidden;
 }
-
-html{
-  scroll-behavior: smooth;
-}
