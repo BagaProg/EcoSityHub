@@ -24,27 +24,33 @@ document.addEventListener('DOMContentLoaded' , () => {
     e.preventDefault();
     let error = formValidate(form);
     let formData = new FormData(form);
-    formData.append('image' , formImage.files[0]);
+    formData.append('image', formImage.files[0]);
+
     if (error === 0) {
-      form.classList.add('_sending');
-      let response = await fetch('pages/sendmail.php' , {
-        method: 'POST',
-        body: formData,
-      });
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        formPreview.innerHTML = ``;
-        form.reset();
-        form.classList.remove('_sending');
-      }else {
-        alert('Error');
-        form.classList.remove('_sending');
-      }
-    }else {
-      alert('Complete the mandatory fields');
+        form.classList.add('_sending');
+        
+        try {
+            let response = await fetch('./sendmail.php', { 
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+            let result = await response.json();
+            alert(result.message);
+            formPreview.innerHTML = ``;
+            form.reset();
+            form.classList.remove('_sending');
+        } catch (error) {
+            console.error('Fetch error:', error);
+            alert('Ошибка при отправке формы. Проверь консоль.');
+        }
+    } else {
+        alert('Complete the mandatory fields');
     }
-  }
+}
+
   function formValidate(form) {
     let error = 0;
     let formReq = document.querySelectorAll('._req');
